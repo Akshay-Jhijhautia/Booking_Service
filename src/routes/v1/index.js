@@ -1,9 +1,8 @@
-const express = require('express');
-
-const { InfoController } = require('../../controllers');
-
+const express = require("express");
 const router = express.Router();
 
-router.get('/info', InfoController.info);
+const bookingRoutes = require("./booking");
+
+router.use("/bookings", bookingRoutes);
 
 module.exports = router;
